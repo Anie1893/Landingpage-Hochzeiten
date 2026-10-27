@@ -12,7 +12,7 @@ Alle Bilder liegen im Ordner **`bilder`**. Jedes Bild hat einen festen Namen:
 | Datei | Wo auf der Seite |
 |---|---|
 | `hero.jpg` | Großes Bild ganz oben |
-| `galerie-1.jpg` … `galerie-9.jpg` | Die 9 Bilder in der Galerie (Reihenfolge 1–9) |
+| `galerie-1.jpg` … `galerie-7.jpg` | Die 7 Bilder in der Galerie. Hochformat: 1, 2, 3, 5, 6 – Querformat (breit): 4 und 7. Werden automatisch zugeschnitten. |
 | `preise.jpg` | Bild neben den Preisen |
 | `dani.jpg` | Rundes Foto von dir bei der Terminbuchung (quadratisch) |
 | `vorschau-social.jpg` | Vorschaubild, wenn der Link geteilt wird (1200 × 630 px) |
@@ -66,7 +66,7 @@ Ist ein Feld leer, wird die Funktion einfach ausgeblendet bzw. durch die Alterna
 - [ ] Bewertungszahlen und Anzahl Hochzeiten unter dem Hero eintragen (`[XX]`)
 - [ ] Drei echte Zitate von Paaren eintragen
 - [ ] Paar und Location beim Hochzeitsfilm eintragen und `videoUrl` setzen
-- [ ] Galeriebilder `galerie-1.jpg` bis `galerie-9.jpg` hochladen
+- [x] Galeriebilder `galerie-1.jpg` bis `galerie-7.jpg` hochladen
 - [ ] `dani.jpg` hochladen
 - [ ] Instagram-Link im Footer eintragen
 - [ ] Optional: `bookingUrl` und `whatsapp` eintragen
