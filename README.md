@@ -61,8 +61,8 @@ Ist ein Feld leer, wird die Funktion einfach ausgeblendet bzw. durch die Alterna
 
 ## Checkliste vor dem Livegang
 
-- [ ] Impressum (`impressum.html`) mit echten Angaben ausfüllen
-- [ ] Datenschutzerklärung mit Generator erstellen und in `datenschutz.html` einfügen
+- [x] Impressum (`impressum.html`) mit echten Angaben ausfüllen (USt-IdNr. ggf. noch ergänzen)
+- [x] Datenschutzerklärung in `datenschutz.html` (bei Meta Pixel erweitern!)
 - [ ] Bewertungszahlen und Anzahl Hochzeiten unter dem Hero eintragen (`[XX]`)
 - [ ] Drei echte Zitate von Paaren eintragen
 - [ ] Paar und Location beim Hochzeitsfilm eintragen und `videoUrl` setzen
