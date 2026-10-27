@@ -88,3 +88,11 @@ Die Seite ist dann unter `https://anie1893.github.io/Landingpage-Hochzeiten/` er
 3. Sobald der DNS-Check grün ist: **„Enforce HTTPS“** aktivieren.
 
 Erst Schritt 1 erledigen, dann Schritt 2. Sonst leitet GitHub auf eine Adresse um, die noch nicht funktioniert.
+
+---
+
+## Wichtig nach Änderungen an `assets/style.css` oder `assets/main.js`
+
+Browser speichern diese Dateien zwischen. Damit Besucher sofort die neue Version sehen,
+in `index.html`, `impressum.html` und `datenschutz.html` die Zahl hinter `?v=` erhöhen
+(z. B. `style.css?v=202610272110` → `style.css?v=202610272130`).
