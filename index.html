@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hochzeitsfotos & Hochzeitsfilme am Bodensee | Visuals von Dani</title>
+<meta name="description" content="Hochzeitsfotografie und Hochzeitsfilme am Bodensee und weltweit. Jeder Moment, für immer eurer. Jetzt kostenloses Erstgespräch buchen.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jeder Moment. Für immer eurer. | Visuals von Dani">
+<meta property="og:description" content="Hochzeitsfotos und Hochzeitsfilme am Bodensee. Kostenloses Erstgespräch buchen.">
+<meta property="og:image" content="bilder/vorschau-social.jpg">
+<meta name="theme-color" content="#F4F1EC">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/InterDisplay-Light.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+
+<script>
+  /* =========================================================
+     EINSTELLUNGEN – hier trägst du deine Daten ein
+     ========================================================= */
+  window.SITE_CONFIG = {
+    // Dein Calendly- oder Cal.com-Link, z. B. "https://calendly.com/visualsvondani/erstgespraech"
+    // Leer lassen = statt Kalender erscheint ein Anfrageformular.
+    bookingUrl: "",
+
+    // E-Mail, an die Anfragen aus dem Formular gehen
+    email: "visuals.von.dani@gmail.com",
+
+    // WhatsApp-Nummer im internationalen Format ohne +, z. B. "4917612345678" (leer = kein WhatsApp-Link)
+    whatsapp: "",
+
+    // Highlight-Film: YouTube- oder Vimeo-Link, z. B. "https://www.youtube.com/watch?v=XXXX" oder "https://vimeo.com/123456"
+    videoUrl: ""
+  };
+</script>
+
+<script>
+  /* Fehlt ein Bild im Ordner "bilder", erscheint automatisch ein beschrifteter Platzhalter */
+  function platzhalter(img) {
+    var box = img.parentNode;
+    box.classList.add("placeholder");
+    var s = document.createElement("span");
+    s.textContent = img.getAttribute("data-platzhalter") || "Bild folgt";
+    box.appendChild(s);
+    img.remove();
+  }
+</script>
+
+<!-- META PIXEL: Erst einbauen, wenn ein Cookie-Banner (Einwilligung) vorhanden ist. Siehe README. -->
+</head>
+<body>
+<!--
+  SO BEARBEITEST DU DIE SEITE
+  - Texte: einfach den Text zwischen den Tags ändern, z. B. <h1>…</h1> oder <p>…</p>.
+    Die spitzen Klammern < > selbst nicht löschen.
+  - Bilder: liegen im Ordner "bilder". Zum Austauschen eine Datei mit genau demselben Namen hochladen.
+  - Abschnitte sind unten mit Kommentaren in Großbuchstaben markiert (HERO, GALERIE, BEWERTUNGEN …).
+-->
+
+<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="#top" id="top" aria-label="Visuals von Dani – nach oben">
+      <span class="brand-name">Visuals von Dani</span>
+      <span class="brand-sub">Hochzeitsfotos &amp; Hochzeitsfilme · Bodensee</span>
+    </a>
+    <a class="btn btn-primary btn-small" href="#termin">Erstgespräch buchen</a>
+  </header>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="wrap" aria-labelledby="hero-title">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="kicker">Foto · Film · oder beides aus einer Hand</p>
+        <h1 id="hero-title">Jeder Moment.<br><span>Für immer eurer.</span></h1>
+        <p class="lead">An eurem Hochzeitstag geht alles so schnell. Den Blick eures Papas beim Einzug, die Tränen beim Ja-Wort, das Lachen eurer Liebsten: Vieles davon bekommt ihr selbst kaum mit. Ich halte jeden dieser Momente in Fotos und Film fest, damit ihr euren Tag ein Leben lang immer wieder erleben könnt.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#termin">Kostenloses Erstgespräch buchen
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="link" href="#arbeiten">Erst Bilder ansehen ↓</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- BILD: bilder/hero.jpg -->
+        <img src="bilder/hero.jpg" alt="Braut umarmt ihren Bräutigam im Garten und strahlt ihn an"
+             fetchpriority="high" data-platzhalter="Hero-Bild (hero.jpg)" onerror="platzhalter(this)">
+      </div>
+    </div>
+    <div class="trust">
+      <!-- TODO: echte Zahlen eintragen -->
+      <span><span class="stars" aria-hidden="true">★★★★★</span>[5,0] aus [XX] Google-Bewertungen</span>
+      <span>[XX] Hochzeiten begleitet</span>
+      <span>Noch freie Termine für 2027</span>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="arbeiten" class="wrap section" aria-labelledby="arbeiten-title">
+    <div class="gallery-head">
+      <div>
+        <p class="eyebrow">Meine Arbeit</p>
+        <h2 id="arbeiten-title">Ein ganzer Tag, erzählt in Bild und Film</h2>
+      </div>
+      <p class="muted">Vom Getting Ready bis zur letzten Runde auf der Tanzfläche. Ich halte mich im Hintergrund und fange ein, was wirklich passiert: in Fotos und im bewegten Bild, mit Ton, Stimmen und Musik.</p>
+    </div>
+
+    <figure class="film" id="film">
+      <button class="film-play" type="button" aria-label="Hochzeitsfilm abspielen">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      </button>
+      <figcaption>
+        <small>Hochzeitsfilm</small>
+        <!-- TODO: Paar und Location eintragen -->
+        <span>[Paar] · [Location] · Highlight-Film, ca. 5 Min.</span>
+      </figcaption>
+    </figure>
+
+    <!-- GALERIE: Bilder heißen bilder/galerie-1.jpg bis bilder/galerie-9.jpg.
+         Zum Austauschen einfach eine Datei mit demselben Namen in den Ordner "bilder" hochladen.
+         Der Text bei alt="..." beschreibt das Bild (wichtig für Google und Barrierefreiheit). -->
+    <div class="masonry">
+      <figure class="tile"><img src="bilder/galerie-1.jpg" loading="lazy" alt="Getting Ready der Braut" data-platzhalter="Getting Ready (galerie-1.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-2.jpg" loading="lazy" alt="Details der Hochzeit" data-platzhalter="Details (galerie-2.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-3.jpg" loading="lazy" alt="Der erste Blick des Brautpaars" data-platzhalter="Erster Blick (galerie-3.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-4.jpg" loading="lazy" alt="Freie Trauung" data-platzhalter="Trauung (galerie-4.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-5.jpg" loading="lazy" alt="Ringtausch in Nahaufnahme" data-platzhalter="Ringtausch (galerie-5.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-6.jpg" loading="lazy" alt="Gerührte Hochzeitsgäste" data-platzhalter="Emotionen der Gäste (galerie-6.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-7.jpg" loading="lazy" alt="Brautpaar hält sich an den Händen, im Hintergrund ein See im Sommerlicht" data-platzhalter="Paarshooting (galerie-7.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-8.jpg" loading="lazy" alt="Familie und Freunde feiern mit dem Brautpaar" data-platzhalter="Familie &amp; Freunde (galerie-8.jpg)" onerror="platzhalter(this)"></figure>
+      <figure class="tile"><img src="bilder/galerie-9.jpg" loading="lazy" alt="Party auf der Tanzfläche" data-platzhalter="Party &amp; Tanzfläche (galerie-9.jpg)" onerror="platzhalter(this)"></figure>
+    </div>
+    <div class="center">
+      <a class="btn btn-outline" href="#termin">Gefällt euch das? Lasst uns sprechen</a>
+    </div>
+  </section>
+
+  <!-- BEWERTUNGEN -->
+  <section class="band section" aria-labelledby="stimmen-title">
+    <div class="wrap">
+      <p class="eyebrow text-center">Was Paare sagen</p>
+      <h2 id="stimmen-title" class="text-center">Die Bilder sind das eine. Das Gefühl dabei das andere.</h2>
+      <div class="reviews">
+        <!-- TODO: echte Zitate eintragen -->
+        <figure class="review">
+          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+          <blockquote>„[Echtes Zitat eines Paares, z. B. was sie gefühlt haben, als sie die Galerie zum ersten Mal geöffnet haben]“</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true"></span><span><strong>[Namen]</strong><small>[Location, Jahr]</small></span></figcaption>
+        </figure>
+        <figure class="review">
+          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+          <blockquote>„[Zitat, das Unsicherheit vor der Kamera anspricht, z. B. wie entspannt das Shooting war]“</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true"></span><span><strong>[Namen]</strong><small>[Location, Jahr]</small></span></figcaption>
+        </figure>
+        <figure class="review">
+          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+          <blockquote>„[Zitat zum Hochzeitsfilm, z. B. wie es war, die Reden und das Ja-Wort noch einmal zu hören]“</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true"></span><span><strong>[Namen]</strong><small>[Location, Jahr]</small></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section class="wrap section" aria-labelledby="ablauf-title">
+    <p class="eyebrow">So läuft's ab</p>
+    <h2 id="ablauf-title">In drei Schritten zu euren Bildern</h2>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h3>Kennenlernen</h3><p>20 Minuten per Video oder Telefon. Ihr erzählt mir von eurem Tag, ich euch, wie ich arbeite. Völlig unverbindlich.</p></div>
+      <div class="step"><span class="num">02</span><h3>Planen</h3><p>Ihr bekommt ein passendes Angebot. Vor der Hochzeit stimmen wir Zeitplan, Location und eure Wunschbilder ab.</p></div>
+      <div class="step"><span class="num">03</span><h3>Genießen</h3><p>Ihr feiert, ich fotografiere. Innerhalb von 2 Wochen bekommt ihr eure Online-Galerie und euren fertig geschnittenen Hochzeitsfilm.</p></div>
+    </div>
+  </section>
+
+  <!-- INVESTITION -->
+  <section class="wrap" style="padding-bottom:88px" aria-labelledby="preise-title">
+    <div class="invest">
+      <div class="invest-image">
+        <!-- BILD: bilder/preise.jpg -->
+        <img src="bilder/preise.jpg" alt="" loading="lazy" style="object-position: 30% 40%" data-platzhalter="Bild (preise.jpg)" onerror="platzhalter(this)">
+      </div>
+      <div class="invest-body">
+        <p class="eyebrow">Investition</p>
+        <h2 id="preise-title">Foto, Film oder beides</h2>
+        <div class="prices">
+          <div class="price"><small>Foto</small><strong>ab 1.800 €</strong></div>
+          <div class="price"><small>Film</small><strong>ab 2.200 €</strong></div>
+          <div class="price best"><small>Foto + Film</small><strong>ab 3.400 €</strong></div>
+        </div>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#CFC7BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Bis zu 10 Stunden Begleitung, vom Getting Ready bis zur Party</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#CFC7BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Alle bearbeiteten Bilder in einer privaten Online-Galerie</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#CFC7BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Hochzeitsfilm: Highlight-Film (ca. 5 Min.)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#CFC7BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Vorgespräch und gemeinsamer Zeitplan</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#CFC7BA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Lieferung innerhalb von 2 Wochen</li>
+        </ul>
+        <a class="btn btn-light" href="#termin">Verfügbarkeit für euer Datum prüfen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMIN -->
+  <section id="termin" class="band section" aria-labelledby="termin-title">
+    <div class="wrap booking">
+      <div class="booking-intro">
+        <p class="eyebrow" style="margin:0">Erstgespräch</p>
+        <h2 id="termin-title">Lasst uns kennenlernen</h2>
+        <p class="muted">20 Minuten, kostenlos und unverbindlich. Sucht euch einfach einen Termin aus, der euch passt. Ich melde mich mit dem Link zum Videocall.</p>
+        <div class="me">
+          <!-- BILD: bilder/dani.jpg (quadratisches Foto von dir) -->
+          <span class="me-photo"><img src="bilder/dani.jpg" alt="Dani" data-platzhalter="Foto" onerror="platzhalter(this)"></span>
+          <span><strong>Dani</strong><small>Ich freue mich darauf, euch zu hören.</small></span>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <div>
+          <p class="field-title" id="service-label">Wofür interessiert ihr euch?</p>
+          <div class="chips" role="group" aria-labelledby="service-label">
+            <button type="button" class="chip" aria-pressed="false" data-service="Foto">Foto</button>
+            <button type="button" class="chip" aria-pressed="false" data-service="Film">Film</button>
+            <button type="button" class="chip" aria-pressed="true" data-service="Foto + Film">Foto + Film</button>
+          </div>
+        </div>
+
+        <!-- Variante A: Buchungskalender (wenn bookingUrl gesetzt ist) -->
+        <div id="calendar-area" hidden>
+          <div class="consent" id="calendar-consent">
+            <p><strong style="color:var(--ink)">Freie Termine anzeigen</strong></p>
+            <p>Der Kalender wird von einem externen Anbieter geladen. Dabei werden Daten an diesen Anbieter übertragen. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <button type="button" class="btn btn-primary" id="load-calendar">Kalender laden und Termin wählen</button>
+          </div>
+        </div>
+
+        <!-- Variante B: Anfrageformular (wenn kein bookingUrl gesetzt ist) -->
+        <form id="request-form" novalidate>
+          <p class="field-title">Kurz zu euch</p>
+          <div class="form-grid">
+            <label>Eure Namen<input name="namen" type="text" placeholder="Anna &amp; Ben" autocomplete="name" required></label>
+            <label>E-Mail oder Telefon<input name="kontakt" type="text" placeholder="anna@beispiel.de" autocomplete="email" required></label>
+            <label>Hochzeitsdatum (falls schon bekannt)<input name="datum" type="text" placeholder="z. B. 12.06.2027"></label>
+            <label>Location / Ort<input name="ort" type="text" placeholder="z. B. Meersburg"></label>
+            <label class="full">Wann passt euch ein Gespräch?<textarea name="zeit" placeholder="z. B. Dienstag oder Mittwoch ab 18 Uhr"></textarea></label>
+          </div>
+          <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px">
+            <button class="btn btn-primary" type="submit">Erstgespräch anfragen</button>
+            <p class="fine" style="margin:0">Kostenlos · unverbindlich · ca. 20 Minuten</p>
+            <p class="form-status" id="form-status" role="status"></p>
+          </div>
+        </form>
+
+        <p class="alt-contact" id="whatsapp-line" hidden>Kein passender Termin dabei? <a id="whatsapp-link" href="#" target="_blank" rel="noopener">Schreibt mir kurz per WhatsApp.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="wrap section faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="text-center" style="margin-bottom:32px">Häufige Fragen</h2>
+    <details><summary>Wir sind total unfotogen. Geht das trotzdem?</summary><p>Fast alle Paare sagen das vorher. Ich gebe euch keine steifen Posen vor, sondern kleine Impulse, damit ihr euch auf euch konzentrieren könnt. Den Rest erledigt der Tag.</p></details>
+    <details><summary>Können wir auch nur Fotos oder nur einen Film buchen?</summary><p>Klar. Ihr könnt Foto oder Film einzeln buchen. Wenn ihr beides nehmt, habt ihr eine Ansprechperson und einen einheitlichen Look, und es läuft niemand dem anderen ins Bild.</p></details>
+    <details><summary>Wie weit im Voraus sollten wir buchen?</summary><p>Für Samstage in der Saison meist 9 bis 15 Monate vorher. Fragt aber gern auch kurzfristig an.</p></details>
+    <details><summary>Fährst du auch weiter weg, z. B. an den Comer See?</summary><p>Sehr gern! Ob direkt bei uns am Bodensee oder eine Hochzeit am Comer See, in der Toskana oder auf Mallorca: Ich begleite euch überall dorthin, wo ihr Ja sagt. Bei Hochzeiten außerhalb der Bodenseeregion kommen Anreise und Unterkunft separat dazu. Die Kosten bespreche ich transparent mit euch im Erstgespräch, damit ihr von Anfang an genau wisst, woran ihr seid.</p></details>
+    <details><summary>Wann bekommen wir Bilder und Film?</summary><p>Fotos und Film bekommt ihr innerhalb von 2 Wochen: die Bilder in eurer privaten Online-Galerie, den Hochzeitsfilm als Download. Zum Anschauen, Teilen und immer wieder Ansehen.</p></details>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <h2>Euer Datum ist noch frei?<br><span>Lasst es uns herausfinden.</span></h2>
+      <a class="btn btn-light" href="#termin">Erstgespräch buchen</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Visuals von Dani</span>
+      <nav aria-label="Rechtliches">
+        <!-- TODO: Instagram-Link eintragen -->
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a class="btn btn-primary" href="#termin">Kostenloses Erstgespräch buchen</a>
+  <small>20 Min · unverbindlich · per Video oder Telefon</small>
+</div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
