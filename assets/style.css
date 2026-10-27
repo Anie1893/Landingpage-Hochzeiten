@@ -85,6 +85,11 @@ h3 { margin: 0; font-size: 20px; font-weight: 600; }
 .film-note { position: absolute; top: 16px; right: 16px; left: 16px; text-align: right; font-size: 12px; color: var(--line); }
 
 .masonry { columns: 3 280px; column-gap: 16px; }
+
+/* Galerie mit 3 festen Spalten: jedes Bild bleibt in seiner Spalte, egal wie breit das Fenster ist */
+.gallery-cols { display: flex; gap: 16px; align-items: flex-start; }
+.gcol { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.gcol .tile { margin: 0; }
 .tile { margin: 0 0 16px; break-inside: avoid; position: relative; border-radius: 4px; overflow: hidden; background: #CDBFAE; }
 .tile img { width: 100%; height: auto; }
 /* Platzhalter, solange ein Bild im Ordner "bilder" fehlt */
@@ -199,6 +204,8 @@ h3 { margin: 0; font-size: 20px; font-weight: 600; }
   .hero-actions .btn svg { display: none; }
   .tile.placeholder { height: 240px !important; }
   .review { flex-basis: 100%; min-width: 0; }
+  .gallery-cols { flex-direction: column; gap: 12px; }
+  .gcol { gap: 12px; width: 100%; }
   .section { padding-block: 64px; }
   .site-header .btn { display: none; }
   .sticky-cta { display: flex; }
