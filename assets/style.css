@@ -1,5 +1,6 @@
 /* ---------- Schriften (lokal eingebunden, DSGVO-freundlich) ---------- */
 @font-face { font-family: "Inter Display"; src: url("fonts/InterDisplay-Light.woff") format("woff"); font-weight: 300; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("fonts/InterDisplay-Medium.woff") format("woff"); font-weight: 500; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("fonts/Inter-Regular.woff") format("woff"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("fonts/Inter-Medium.woff") format("woff"); font-weight: 500; font-display: swap; }
 @font-face { font-family: "Inter"; src: url("fonts/Inter-SemiBold.woff") format("woff"); font-weight: 600; font-display: swap; }
@@ -59,7 +60,7 @@ h3 { margin: 0; font-size: 20px; font-weight: 600; }
 .hero-text { flex: 1 1 460px; padding: clamp(32px, 5vw, 56px); display: flex; flex-direction: column; justify-content: center; gap: 20px; }
 .hero-text .kicker { margin: 0; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--accent); }
 .hero h1 { font-size: clamp(42px, 5.4vw, 66px); }
-.hero h1 span { color: var(--accent); }
+.hero h1 span { color: var(--accent); font-weight: 500; }
 .hero-text p.lead { margin: 0; font-size: 18px; color: var(--muted); max-width: 540px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .hero-actions .link { display: inline-flex; align-items: center; min-height: 52px; padding: 0 12px; font-weight: 500; }
