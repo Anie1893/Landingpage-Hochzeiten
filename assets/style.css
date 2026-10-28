@@ -224,3 +224,6 @@ h3 { margin: 0; font-size: 20px; font-weight: 600; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Überschrift beim Erstgespräch in einer Zeile */
+#termin-title { font-size: clamp(26px, 2.5vw, 36px); }
