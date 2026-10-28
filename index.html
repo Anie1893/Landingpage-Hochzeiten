@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#F4F1EC">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/InterDisplay-Light.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=202610280840">
+<link rel="stylesheet" href="assets/style.css?v=202610280851">
 
 <script>
   /* =========================================================
@@ -30,7 +30,10 @@
     whatsapp: "",
 
     // Highlight-Film: YouTube- oder Vimeo-Link, z. B. "https://www.youtube.com/watch?v=XXXX" oder "https://vimeo.com/123456"
-    videoUrl: ""
+    videoUrl: "",
+
+    // Eigenes Video im Ordner "film" (hat Vorrang vor videoUrl). Leer = kein eigenes Video.
+    videoFile: "film/hochzeitsfilm.mp4"
   };
 </script>
 
@@ -99,14 +102,15 @@
       <p class="muted">Vom Getting Ready bis zur letzten Runde auf der Tanzfläche. Ich halte mich im Hintergrund und fange ein, was wirklich passiert: in Fotos und im bewegten Bild, mit Ton, Stimmen und Musik.</p>
     </div>
 
+    <!-- HOCHZEITSFILM: Video = film/hochzeitsfilm.mp4, Vorschaubild = film/poster.jpg -->
     <figure class="film" id="film">
+      <img class="film-poster" src="film/poster.jpg" alt="" loading="lazy">
       <button class="film-play" type="button" aria-label="Hochzeitsfilm abspielen">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
       </button>
       <figcaption>
         <small>Hochzeitsfilm</small>
-        <!-- TODO: Paar und Location eintragen -->
-        <span>[Paar] · [Location] · Highlight-Film, ca. 5 Min.</span>
+        <span>Trailer · ca. 1:20 Min. · mit Ton</span>
       </figcaption>
     </figure>
 
@@ -298,6 +302,6 @@
   <small>15 Min · unverbindlich · per Video oder Telefon</small>
 </div>
 
-<script src="assets/main.js?v=202610280840"></script>
+<script src="assets/main.js?v=202610280851"></script>
 </body>
 </html>

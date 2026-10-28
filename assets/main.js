@@ -78,7 +78,20 @@
     return null;
   }
   var src = cfg.videoUrl ? embedUrl(cfg.videoUrl) : null;
-  if (!src) {
+  if (cfg.videoFile) {
+    playBtn.addEventListener("click", function () {
+      var v = document.createElement("video");
+      v.src = cfg.videoFile;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute("playsinline", "");
+      v.className = "film-video";
+      film.innerHTML = "";
+      film.appendChild(v);
+      var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+    });
+  } else if (!src) {
     playBtn.hidden = true;
     var note = document.createElement("span");
     note.className = "film-note";

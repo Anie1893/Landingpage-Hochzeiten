@@ -96,3 +96,12 @@ Erst Schritt 1 erledigen, dann Schritt 2. Sonst leitet GitHub auf eine Adresse u
 Browser speichern diese Dateien zwischen. Damit Besucher sofort die neue Version sehen,
 in `index.html`, `impressum.html` und `datenschutz.html` die Zahl hinter `?v=` erhöhen
 (z. B. `style.css?v=202610272110` → `style.css?v=202610272130`).
+
+---
+
+## Hochzeitsfilm austauschen
+
+Das Video liegt in `film/hochzeitsfilm.mp4`, das Vorschaubild in `film/poster.jpg`.
+Zum Austauschen eine neue Datei mit demselben Namen hochladen.
+Wichtig: Das Video vorher fürs Web exportieren (MP4/H.264, 1080p, möglichst unter 30 MB) –
+4K-Originale sind viel zu groß und laden am Handy ewig. GitHub erlaubt maximal 100 MB pro Datei.
