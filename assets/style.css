@@ -248,3 +248,11 @@ h3 { margin: 0; font-size: 20px; font-weight: 600; }
   .about-img { max-width: none; flex-basis: 100%; aspect-ratio: 1 / 1; }
   .about-text p { font-size: 16px; }
 }
+
+/* ---------- Cookie-Banner ---------- */
+.cookie-banner { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; max-width: 520px; margin-left: auto; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 30px rgba(30,28,26,.15); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+.cookie-banner p { margin: 0; color: var(--muted); }
+.cookie-banner .cookie-title { color: var(--ink); font-weight: 600; font-size: 16px; }
+.cookie-actions { display: flex; gap: 10px; margin-top: 6px; }
+.cookie-btn { flex: 1 1 0; min-height: 46px; padding: 0 16px; font-size: 15px; background: var(--ink); color: var(--bg); }
+.cookie-btn:hover { background: var(--accent); color: var(--white); }

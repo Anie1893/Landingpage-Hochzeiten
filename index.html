@@ -12,13 +12,16 @@
 <meta name="theme-color" content="#F4F1EC">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/InterDisplay-Light.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=202610281912">
+<link rel="stylesheet" href="assets/style.css?v=202610290833">
 
 <script>
   /* =========================================================
      EINSTELLUNGEN – hier trägst du deine Daten ein
      ========================================================= */
   window.SITE_CONFIG = {
+    // Meta Pixel / Datensatz-ID aus dem Events Manager. Wird erst nach Cookie-Zustimmung geladen.
+    metaPixelId: "1971344566605847",
+
     // Dein Calendly- oder Cal.com-Link, z. B. "https://calendly.com/visualsvondani/erstgespraech"
     // Leer lassen = statt Kalender erscheint ein Anfrageformular.
     bookingUrl: "https://calendly.com/visuals-von-dani/hochzeits-kennenlerngesprach",
@@ -307,17 +310,28 @@
         <!-- TODO: Instagram-Link eintragen -->
         <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
         <a href="impressum.html">Impressum</a>
+        <a href="#" id="cookie-settings">Cookie-Einstellungen</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
     </div>
   </div>
 </footer>
 
+<!-- COOKIE-BANNER -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+  <p class="cookie-title" id="cookie-title">Darf ich Cookies verwenden?</p>
+  <p id="cookie-text">Ich nutze den Meta Pixel, um zu sehen, ob meine Werbung auf Instagram und Facebook ankommt. Das geht nur mit eurer Zustimmung. Ihr könnt sie jederzeit unten bei „Cookie-Einstellungen“ ändern. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <div class="cookie-actions">
+    <button type="button" class="btn cookie-btn" id="cookie-deny">Ablehnen</button>
+    <button type="button" class="btn cookie-btn" id="cookie-accept">Akzeptieren</button>
+  </div>
+</div>
+
 <div class="sticky-cta" id="sticky-cta">
   <a class="btn btn-primary" href="#termin">Kostenloses Erstgespräch buchen</a>
   <small>15 Min · unverbindlich · per Video oder Telefon</small>
 </div>
 
-<script src="assets/main.js?v=202610281912"></script>
+<script src="assets/main.js?v=202610290833"></script>
 </body>
 </html>

@@ -3,6 +3,57 @@
   var cfg = window.SITE_CONFIG || {};
   var service = "Foto + Film";
 
+  /* ---------- Cookie-Einwilligung + Meta Pixel ---------- */
+  var CONSENT_KEY = "vvd-consent";
+  function getConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} }
+  var pixelLoaded = false;
+  function loadPixel() {
+    if (pixelLoaded || !cfg.metaPixelId) return;
+    pixelLoaded = true;
+    /* Offizieller Meta-Pixel-Code */
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', cfg.metaPixelId);
+    window.fbq('track', 'PageView');
+  }
+  // Ereignis senden (nur wenn zugestimmt wurde)
+  function track(name, params, custom) {
+    if (!pixelLoaded || !window.fbq) return;
+    window.fbq(custom ? 'trackCustom' : 'track', name, params || {});
+  }
+  var banner = document.getElementById("cookie-banner");
+  function showBanner() { if (banner) banner.hidden = false; }
+  function hideBanner() { if (banner) banner.hidden = true; }
+  if (getConsent() === "granted") loadPixel();
+  else if (getConsent() !== "denied") showBanner();
+  if (banner) {
+    document.getElementById("cookie-accept").addEventListener("click", function () { setConsent("granted"); hideBanner(); loadPixel(); });
+    document.getElementById("cookie-deny").addEventListener("click", function () {
+      var wasGranted = getConsent() === "granted";
+      setConsent("denied"); hideBanner();
+      if (wasGranted) window.location.reload();
+    });
+  }
+  var settingsLink = document.getElementById("cookie-settings");
+  if (settingsLink) settingsLink.addEventListener("click", function (e) { e.preventDefault(); showBanner(); });
+
+  // Klicks auf "Erstgespräch buchen" & Co.
+  document.querySelectorAll('a[href="#termin"]').forEach(function (a) {
+    a.addEventListener("click", function () { track("ErstgespraechKlick", { button: a.textContent.trim() }, true); });
+  });
+
+  // Calendly meldet eine erfolgreiche Buchung an die Seite
+  window.addEventListener("message", function (e) {
+    var d = e.data;
+    if (!d || typeof d !== "object" || typeof d.event !== "string") return;
+    if (d.event === "calendly.event_scheduled") track("Schedule", { content_name: "Erstgespräch", service: service });
+    if (d.event === "calendly.date_and_time_selected") track("TerminGewaehlt", { service: service }, true);
+  });
+
   /* ---------- Leistung wählen (Foto / Film / beides) ---------- */
   var chips = document.querySelectorAll(".chip");
   chips.forEach(function (chip) {
@@ -24,6 +75,7 @@
       try { url = new URL(cfg.bookingUrl); } catch (e) { return; }
       if (url.hostname.indexOf("calendly.com") !== -1) {
         url.searchParams.set("embed_type", "Inline");
+        url.searchParams.set("embed_domain", window.location.host);
         url.searchParams.set("hide_gdpr_banner", "1");
         url.searchParams.set("a1", service); // vorausgefüllt, falls die 1. Frage in Calendly „Wofür interessiert ihr euch?“ ist
       }
@@ -33,6 +85,7 @@
       frame.src = url.toString();
       var consent = document.getElementById("calendar-consent");
       consent.replaceWith(frame);
+      track("KalenderGeladen", { service: service }, true);
     });
   }
 
@@ -90,6 +143,7 @@
       film.innerHTML = "";
       film.appendChild(v);
       var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+      track("FilmAbgespielt", {}, true);
     });
   } else if (!src) {
     playBtn.hidden = true;
