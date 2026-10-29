@@ -79,15 +79,12 @@ Ist ein Feld leer, wird die Funktion einfach ausgeblendet bzw. durch die Alterna
 **GitHub Pages einschalten:** Repository → **Settings → Pages** → „Deploy from a branch“, Branch `main`, Ordner `/ (root)` → Save.
 Die Seite ist dann unter `https://anie1893.github.io/Landingpage-Hochzeiten/` erreichbar.
 
-**Subdomain von dani-schaefer.com (IONOS)**, z. B. `hochzeit.dani-schaefer.com`:
+**Eigene Domain: `hochzeit-dani-schaefer.com`** (gekauft bei Cloudflare, Konto visuals.von.dani@gmail.com, verlängert sich automatisch jährlich).
 
-1. Bei IONOS → Domains & SSL → dani-schaefer.com → DNS → Eintrag hinzufügen:
-   Typ **CNAME**, Hostname `hochzeit`, zeigt auf `anie1893.github.io`.
-   Die bestehende Website auf dani-schaefer.com bleibt davon unberührt.
-2. Bei GitHub → Settings → Pages → „Custom domain“: `hochzeit.dani-schaefer.com` → Save.
-3. Sobald der DNS-Check grün ist: **„Enforce HTTPS“** aktivieren.
-
-Erst Schritt 1 erledigen, dann Schritt 2. Sonst leitet GitHub auf eine Adresse um, die noch nicht funktioniert.
+- DNS bei Cloudflare (alle „DNS only“, graue Wolke): 4× A-Eintrag `@` → `185.199.108.153`, `.109.153`, `.110.153`, `.111.153`; CNAME `www` → `anie1893.github.io`.
+- TXT `@` → `facebook-domain-verification=…` – Domain ist im Meta Business Manager verifiziert. **Nicht löschen.**
+- GitHub → Settings → Pages → Custom domain: `hochzeit-dani-schaefer.com` (steht in der Datei `CNAME` – nicht löschen), „Enforce HTTPS“ an.
+- Die alte Adresse `anie1893.github.io/Landingpage-Hochzeiten/` leitet automatisch auf die Domain weiter.
 
 ---
 
