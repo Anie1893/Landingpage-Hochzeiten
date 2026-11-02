@@ -256,3 +256,14 @@ h3 { margin: 0; font-size: 20px; font-weight: 600; }
 .cookie-actions { display: flex; gap: 10px; margin-top: 6px; }
 .cookie-btn { flex: 1 1 0; min-height: 46px; padding: 0 16px; font-size: 15px; background: var(--ink); color: var(--bg); }
 .cookie-btn:hover { background: var(--accent); color: var(--white); }
+
+/* „Lieber erst schreiben?“ – Instagram-DM als Alternative zum Erstgespräch */
+.write-line { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.write-line a { white-space: nowrap; color: inherit; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.write-line a:hover { color: var(--ink); }
+.write-line--dark { color: var(--line); }
+.write-line--dark a:hover { color: var(--bg); }
+.write-line--booking { text-align: center; margin: 0; }
+.invest-body .write-line { margin-top: -8px; }
+.footer-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.hero-text .write-line { margin-top: -8px; }

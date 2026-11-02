@@ -46,6 +46,15 @@
     a.addEventListener("click", function () { track("ErstgespraechKlick", { button: a.textContent.trim() }, true); });
   });
 
+  // Klicks auf „Lieber erst schreiben?“ (Instagram-DM)
+  document.querySelectorAll("a.ig-dm").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var platz = a.getAttribute("data-platz") || "";
+      track("Contact", { method: "instagram_dm", platz: platz });
+      track("NachrichtKlick", { kanal: "Instagram", platz: platz }, true);
+    });
+  });
+
   // Calendly meldet eine erfolgreiche Buchung an die Seite
   window.addEventListener("message", function (e) {
     var d = e.data;
